@@ -1,0 +1,741 @@
+{
+	"info": {
+		"_postman_id": "20fb1246-7c29-46be-a262-c052f2fb7175",
+		"name": "Badge Operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Create a badge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTI0MjMzOCwiaWF0IjoxNTk5MTU1OTM4LCJuYmYiOjE1OTkxNTU5MzYsImp0aSI6IjRmNTJiMmE4LTMzNmUtNDU2YS04OTk4LWZmM2ZmMjBmYWRmNiIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzODpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.nmPj6YzUI5ZOaJYhD23Sd-kAoY0wpbwT-xBnuRqaVuI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "vfThirdpartyCookiesEnabled=true; vfDeviceId=ef3ffd90-ae4e-40a2-9963-357283500c57; VfSess=f0bl1f8b4tp7sjr4aq3m5c73cs; VfRefresh=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTYyODYyOTA2NiwiaWF0IjoxNTk3ODcwNjY2LCJuYmYiOjE1OTc4NzA2NjQsImp0aSI6ImJjMmMxMjlhLWQ5MGMtNGY0MS05ZWVlLTczNzAxNzBiOTc3NyIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDA0Y2IzMSIsImF1ZCI6ImViNDJhZDNiLWNkYjgtNDI1MC05YjA5LTA5MzEzMjExZmZmZiIsInZmOmNsaWVudCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTk5OTk5OTk5OTk5OSIsInZmOnV1IjoiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtMDAwMDAwMDRjYjMxIiwidmY6Y3JlZHR5cGUiOiJ1c2VyX3Rva2VuIn0.v47PBYu0cz9uai2L4Pp11OKfdv3AFg0WXRhpbdmTl58; VfAccess_00000000-0000-4000-8000-337a437adec1=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5Nzg3MTA2NiwiaWF0IjoxNTk3ODcwNzY2LCJuYmYiOjE1OTc4NzA3NjQsImp0aSI6IjIwZmE1Y2NlLTVjZTAtNDA3NC1iYzNmLWQ2NjljNDM4MTFjYiIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDA0Y2IzMSIsImF1ZCI6ImViNDJhZDNiLWNkYjgtNDI1MC05YjA5LTA5MzEzMjExZmZmZiIsInZmOmNsaWVudCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTk5OTk5OTk5OTk5OSIsInZmOnV1IjoiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtMDAwMDAwMDRjYjMxIiwidmY6Y3JlZHR5cGUiOiJ1c2VyX3Rva2VuIiwicGVybWlzc2lvbnMiOlsiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtMzM3YTQzN2FkZWMxOmFkbWluIiwiNTY2OTYxNjYtNmY3NS03MjYxLTAwMDAtMDAwMDAwMDAwMDAwOnVzZXIiLCIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwNjQ6YWRtaW4iLCI1NjY5NjE2Ni02Zjc1LTcyNjEtMDAwMC0wMDAwMDAwMDAwMDA6YWRtaW4iLCIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC1lZjRlZGU5YmE4ZDk6YWRtaW4iLCIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0zMzdhNDM3YWRlYzE6dXNlciIsIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDA2NDp1c2VyIiwiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtZWY0ZWRlOWJhOGQ5OnVzZXIiXX0.TE0D4sQuEDxnal72jCUVZVymWBA2zUC-rVD-Lk-7oFw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"super_user_1\",\n    \"description\": \"Super User 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.vf-test3.info/profile/badge",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"vf-test3",
+								"info"
+							],
+							"path": [
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a badge to a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTI0MjYzMCwiaWF0IjoxNTk5MTU2MjMwLCJuYmYiOjE1OTkxNTYyMjgsImp0aSI6IjlkMDk2ZDM5LTFkOWEtNDkzNy1iMjVkLWRmYWQxZjRjNjNiNyIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzODpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.iRatK-Q2s52vDL9XjXjFj_QFXgLT1QxCJUV6cX0K-To",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"super_user_1\",\n    \"user_uuid\": \"00000000-0000-4000-8000-06100c8fe400\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.vf-test3.org/users/profile/badge",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"vf-test3",
+								"org"
+							],
+							"path": [
+								"users",
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vf-test3.org/v2/vf-test3.click/users/6666000000000",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vf-test3",
+								"org"
+							],
+							"path": [
+								"v2",
+								"vf-test3.click",
+								"users",
+								"6666000000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "_sRumHX40okmSkx@VdCS_k2TkfTew0",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "fae59e8f-222b-4792-9acf-d8d3efb1e1a0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "httpbasic",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "56696166-6f75-7261-0000-000000000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://auth.vf-test3.org/authorize_client",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"vf-test3",
+								"org"
+							],
+							"path": [
+								"authorize_client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear User Cache",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.vf-test3.org/v2/89163192806456/users/2967600000000?skipcache",
+							"protocol": "https",
+							"host": [
+								"api",
+								"vf-test3",
+								"org"
+							],
+							"path": [
+								"v2",
+								"89163192806456",
+								"users",
+								"2967600000000"
+							],
+							"query": [
+								{
+									"key": "skipcache",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete badge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5ODAxODg3MCwiaWF0IjoxNTk4MDE4NTcwLCJuYmYiOjE1OTgwMTg1NjgsImp0aSI6ImE1ZWQ4OWQyLWE5NGUtNGVlMy05NWZlLWRjNmRhZmZkNDAwMCIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzODpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.gOiYEUsfc_zgoFeCpA_jdvDpznygnBE9LKjD82_r-gQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"super_user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.vf-test3.org/profile/badge",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"vf-test3",
+								"org"
+							],
+							"path": [
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove an assigned badge",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5ODAxODQwNCwiaWF0IjoxNTk4MDE4MTA0LCJuYmYiOjE1OTgwMTgxMDIsImp0aSI6ImRmNDZkYTBlLTgwNzktNGZlNC1iMzFmLWEyYjRjNzIyMzYxOSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzODpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.mp263_DDIzAob9VYM5fkTCyBzy9aIzCOmiYGkywSv5A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"super_user\",\n    \"user_uuid\": \"00000000-0000-4000-8000-02b2f2be6c00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.vf-test3.org/users/profile/badge",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"vf-test3",
+								"org"
+							],
+							"path": [
+								"users",
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Production",
+			"item": [
+				{
+					"name": "Create a badge",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"super_user\",\n    \"description\": \"Super User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.viafoura.co/profile/badge",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"viafoura",
+								"co"
+							],
+							"path": [
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a badge to a user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_uuid\": \"c1f19e1f-55a4-4792-b92f-6c64f57f6e27\",\n    \"label\": \"super_user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.viafoura.co/users/profile/badge",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"viafoura",
+								"co"
+							],
+							"path": [
+								"users",
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "vf-dev2",
+					"item": [
+						{
+							"name": "Get the token",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "525fdbf2-3a93-4ccd-aa75-b5dc99d05ecc",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "Tw%%uMx@d_eFhR8_!g8lBSMFqexXm2",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "httpbasic",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "00000000-0000-4000-8000-000000000bc5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://auth.vf-dev2.org/authorize_client",
+									"protocol": "https",
+									"host": [
+										"auth",
+										"vf-dev2",
+										"org"
+									],
+									"path": [
+										"authorize_client"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a badge",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTg0Nzc1NCwiaWF0IjoxNTk4OTgzNzU0LCJuYmYiOjE1OTg5ODM3NTIsImp0aSI6IjE4ZWZkMTRkLTFhZDUtNDIxOC04Y2Y2LTk1NmE2Njk0NzYxOSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNTpjbGllbnQiXSwidmY6Y2xpZW50IjoiNTI1ZmRiZjItM2E5My00Y2NkLWFhNzUtYjVkYzk5ZDA1ZWNjIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.JjK1DdsxnG-JuJHLzAKV9IQ-8vcQa8BTORy3mEt0Ve4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"super_user\",\n    \"description\": \"Super User\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://auth.vf-dev2.info/profile/badge",
+									"protocol": "https",
+									"host": [
+										"auth",
+										"vf-dev2",
+										"info"
+									],
+									"path": [
+										"profile",
+										"badge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a badge to a user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTg0Nzc1NCwiaWF0IjoxNTk4OTgzNzU0LCJuYmYiOjE1OTg5ODM3NTIsImp0aSI6IjE4ZWZkMTRkLTFhZDUtNDIxOC04Y2Y2LTk1NmE2Njk0NzYxOSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNTpjbGllbnQiXSwidmY6Y2xpZW50IjoiNTI1ZmRiZjItM2E5My00Y2NkLWFhNzUtYjVkYzk5ZDA1ZWNjIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.JjK1DdsxnG-JuJHLzAKV9IQ-8vcQa8BTORy3mEt0Ve4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_uuid\": \"00000000-0000-4000-8000-00000004cb31\",\n    \"label\": \"super_user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://auth.vf-dev2.info/users/profile/badge",
+									"protocol": "https",
+									"host": [
+										"auth",
+										"vf-dev2",
+										"info"
+									],
+									"path": [
+										"users",
+										"profile",
+										"badge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.vf-dev2.org/v2/kube.vf-dev2.click/users/314161",
+									"protocol": "https",
+									"host": [
+										"api",
+										"vf-dev2",
+										"org"
+									],
+									"path": [
+										"v2",
+										"kube.vf-dev2.click",
+										"users",
+										"314161"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove all assigned badges",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTg0Nzc1NCwiaWF0IjoxNTk4OTgzNzU0LCJuYmYiOjE1OTg5ODM3NTIsImp0aSI6IjE4ZWZkMTRkLTFhZDUtNDIxOC04Y2Y2LTk1NmE2Njk0NzYxOSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNTpjbGllbnQiXSwidmY6Y2xpZW50IjoiNTI1ZmRiZjItM2E5My00Y2NkLWFhNzUtYjVkYzk5ZDA1ZWNjIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.JjK1DdsxnG-JuJHLzAKV9IQ-8vcQa8BTORy3mEt0Ve4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_uuid\": \"00000000-0000-4000-8000-00000004cb31\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://auth.vf-dev2.org/users/profile/badge",
+									"protocol": "https",
+									"host": [
+										"auth",
+										"vf-dev2",
+										"org"
+									],
+									"path": [
+										"users",
+										"profile",
+										"badge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Disable badge",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTg0Nzc1NCwiaWF0IjoxNTk4OTgzNzU0LCJuYmYiOjE1OTg5ODM3NTIsImp0aSI6IjE4ZWZkMTRkLTFhZDUtNDIxOC04Y2Y2LTk1NmE2Njk0NzYxOSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNTpjbGllbnQiXSwidmY6Y2xpZW50IjoiNTI1ZmRiZjItM2E5My00Y2NkLWFhNzUtYjVkYzk5ZDA1ZWNjIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMGJjNSIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.JjK1DdsxnG-JuJHLzAKV9IQ-8vcQa8BTORy3mEt0Ve4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"super_user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://auth.vf-dev2.org/profile/badge",
+									"protocol": "https",
+									"host": [
+										"auth",
+										"vf-dev2",
+										"org"
+									],
+									"path": [
+										"profile",
+										"badge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Clear User Cache",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.vf-dev2.org/v2/3013/users/314161?skipcache",
+									"protocol": "https",
+									"host": [
+										"api",
+										"vf-dev2",
+										"org"
+									],
+									"path": [
+										"v2",
+										"3013",
+										"users",
+										"314161"
+									],
+									"query": [
+										{
+											"key": "skipcache",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "vf-dev3",
+					"item": [
+						{
+							"name": "Get the token Copy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "VmTfxZta2fIZJbJ85IBmlPPFbSK86z",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "028b922f-9b26-4387-93e8-2c615f7f5b3b",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "httpbasic",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "00000000-0000-4000-8000-5117ec6f2c38",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://auth.vf-dev3.org/authorize_client",
+									"protocol": "https",
+									"host": [
+										"auth",
+										"vf-dev3",
+										"org"
+									],
+									"path": [
+										"authorize_client"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "localhost",
+			"item": [
+				{
+					"name": "Create a badge Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"super_user\",\n    \"description\": \"Super User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/profile/badge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profile",
+								"badge"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
