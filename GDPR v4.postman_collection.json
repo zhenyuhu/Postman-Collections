@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "f53e976b-86ea-4cfc-a08f-464628fab9fd",
+		"name": "GDPR v4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Healthy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tir.vf-test3.org/healthy",
+					"protocol": "https",
+					"host": [
+						"tir",
+						"vf-test3",
+						"org"
+					],
+					"path": [
+						"healthy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTc2MzMzNiwiaWF0IjoxNTk5Njc2OTM2LCJuYmYiOjE1OTk2NzY5MzQsImp0aSI6ImMxZjM4ZGU0LWMwYWItNGIzYy04ZDk1LWQxNzY5ODVhMzM1NCIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzODpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTUxMTdlYzZmMmMzOCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.64T9dSmIsS8lvOd_WZdcpwlfDLSFuIKsrdpu_DkFQ5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://tir.vf-test3.org/v4/tir/gdpr/export/00000000-0000-4000-8000-337a437adec1/00000000-0000-4000-8000-06100c8fe400",
+					"protocol": "https",
+					"host": [
+						"tir",
+						"vf-test3",
+						"org"
+					],
+					"path": [
+						"v4",
+						"tir",
+						"gdpr",
+						"export",
+						"00000000-0000-4000-8000-337a437adec1",
+						"00000000-0000-4000-8000-06100c8fe400"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Export Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTc2NjQ2OCwiaWF0IjoxNTk5NjgwMDY4LCJuYmYiOjE1OTk2ODAwNjYsImp0aSI6Ijg5NzM2MzE2LTlmNWItNGIxNi04OGIzLWI3MWViNDk2Yzk3ZSIsInN1YiI6IjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMDpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.h_hBqpgz-8ZgIeMoytc5JzmHALZduWB3F03PPDFiIsA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tir.vf-test3.org/v4/tir/gdpr/export/00000000-0000-4000-8000-337a437adec1/00000000-0000-4000-8000-02b2f2be6c00",
+					"protocol": "https",
+					"host": [
+						"tir",
+						"vf-test3",
+						"org"
+					],
+					"path": [
+						"v4",
+						"tir",
+						"gdpr",
+						"export",
+						"00000000-0000-4000-8000-337a437adec1",
+						"00000000-0000-4000-8000-02b2f2be6c00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTc2NTA0NywiaWF0IjoxNTk5Njc4NjQ3LCJuYmYiOjE1OTk2Nzg2NDUsImp0aSI6IjA1NmIxOWY4LTQ2NjMtNDEzMC04N2MwLTYxNzRlMWNkY2IxYyIsInN1YiI6IjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMDpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.L2Qi1Q_6x5eDgvJuVdF1uVU_l6FM74rXK6CTqwyws_M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://tir.vf-test3.org/v4/tir/gdpr/delete/00000000-0000-4000-8000-5117ec6f2c38/00000000-0000-4000-8000-02b2f2be6c00",
+					"protocol": "https",
+					"host": [
+						"tir",
+						"vf-test3",
+						"org"
+					],
+					"path": [
+						"v4",
+						"tir",
+						"gdpr",
+						"delete",
+						"00000000-0000-4000-8000-5117ec6f2c38",
+						"00000000-0000-4000-8000-02b2f2be6c00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Delete Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWFmb3VyYSIsImV4cCI6MTU5OTc2NTA0NywiaWF0IjoxNTk5Njc4NjQ3LCJuYmYiOjE1OTk2Nzg2NDUsImp0aSI6IjA1NmIxOWY4LTQ2NjMtNDEzMC04N2MwLTYxNzRlMWNkY2IxYyIsInN1YiI6IjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMCIsInZmOnByaXYiOlsiY2xpZW50Il0sInBlcm1pc3Npb25zIjpbIjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMDpjbGllbnQiXSwidmY6Y2xpZW50IjoiZmFlNTllOGYtMjIyYi00NzkyLTlhY2YtZDhkM2VmYjFlMWEwIiwidmY6Y3JlZCI6IjU2Njk2MTY2LTZmNzUtNzI2MS0wMDAwLTAwMDAwMDAwMDAwMCIsInZmOmNyZWR0eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXVkIjoiZWI0MmFkM2ItY2RiOC00MjUwLTliMDktMDkzMTMyMTFmZmZmIn0.L2Qi1Q_6x5eDgvJuVdF1uVU_l6FM74rXK6CTqwyws_M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tir.vf-test3.org/v4/tir/gdpr/delete/00000000-0000-4000-8000-5117ec6f2c38/00000000-0000-4000-8000-02b2f2be6c00",
+					"protocol": "https",
+					"host": [
+						"tir",
+						"vf-test3",
+						"org"
+					],
+					"path": [
+						"v4",
+						"tir",
+						"gdpr",
+						"delete",
+						"00000000-0000-4000-8000-5117ec6f2c38",
+						"00000000-0000-4000-8000-02b2f2be6c00"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
